@@ -159,6 +159,25 @@ request text, minimize vague wording and favor concrete references.
   pin the resulting ref/SHA, and proceed unless the user explicitly asks for
   another refresh.
 
+## Linear Work Tracking
+
+- Track substantive work in Linear when the Linear connector is available.
+- Use the user's own Linear team by default. If the user has a dedicated
+  personal team, use that team. If not, use the user's primary work team.
+- At the start of a substantive task, iterate through the user's Linear
+  projects and choose the best active project for the work.
+- Prefer, in order: a project the user explicitly names, an active project that
+  matches the repository or task area, or a personal/general work project for
+  the user.
+- If no suitable project exists, create a new Linear project in the most
+  relevant user-owned or primary work team and use that project for the work.
+- Look for an existing issue in the selected project that matches the task. If
+  none exists, create a new issue in the selected project.
+- Keep the Linear issue updated with the current status, relevant PRs, commits,
+  blockers, verification results, and final outcome.
+- Do not create or update Linear issues for trivial read-only questions unless
+  the user asks to track them.
+
 ## Flake And CI Failures
 
 - If CI fails after a change, determine whether the failure is causally related

@@ -24,11 +24,18 @@ These are cross-repo defaults. Always check the nearest repo or subdirectory
   `git fetch` or `git-remote-https` processes and stop them before retrying.
 - Do not rewrite, discard, or revert user changes unless the user explicitly
   asks for that operation.
+- Before creating a new branch or pull request, identify the repo's default
+  branch (`master` or `main`), refresh that default branch intentionally, and
+  base the new branch or pull request on the refreshed default branch unless the
+  user explicitly asks for a different base.
 
 ## Pull Requests
 
 - Create new branches with a consistent personal prefix, such as
   `dev/<username>/`, unless the user requests a different branch name.
+- New pull request branches should start from a recent default branch (`master`
+  or `main`) and target that same default branch unless the user explicitly
+  asks for a stack or a non-default base.
 - Prefix pull request titles with a concise topic tag that matches the change
   area, for example `[frontend]`, `[api]`, `[docs]`, or another
   project/component tag.

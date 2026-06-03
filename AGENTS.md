@@ -10,6 +10,28 @@ These are cross-repo defaults. Always check the nearest repo or subdirectory
 - When adding workflow guidance, prefer the nearest existing scoped
   `AGENTS.md` that owns the affected work.
 
+## Notes And Memory
+
+- Treat `~/Documents/Notes` as the user's living brain of durable knowledge.
+- At the start of substantive work, scan relevant markdown notes in
+  `~/Documents/Notes` for prior context, decisions, links, and lessons before
+  making a plan.
+- Continually record useful learnings and memories as markdown in
+  `~/Documents/Notes`. Prefer concise notes that name the project, date,
+  source, decision, and why the information matters.
+- When related notes exist, add markdown links between them. Keep related
+  decisions, follow-ups, source documents, and implementation notes connected
+  instead of leaving isolated notes.
+- Record links for every created pull request, relevant issue, found document
+  source, dashboard, log, discussion, and important learning. Include enough
+  context to explain why each link mattered.
+- Before finishing substantive work, update the relevant notes with final
+  status, verification results, remaining follow-ups, and links created during
+  the task.
+- Use notes to improve future work, but do not copy private note contents into
+  public repositories, public issues, public pull requests, or messages to
+  other people unless the user explicitly approves that disclosure.
+
 ## Git Hygiene
 
 - In very large repos, avoid broad remote updates unless every remote ref is
@@ -70,6 +92,17 @@ These are cross-repo defaults. Always check the nearest repo or subdirectory
 
 ## Messages On Behalf Of The User
 
+- When communicating with other people, assume they do not know who you are,
+  what you are doing, what the prior conversation said, or why the work
+  matters.
+- State the concrete goal, the current status, the decision or help needed, and
+  the relevant links or evidence in clear terms.
+- Format messages so they are easy to parse: put the ask near the top, use
+  short paragraphs or bullets for distinct facts, and avoid burying important
+  context in prose.
+- Treat every external communication as a deliberate artifact. Check the
+  audience, permissions, confidentiality, tone, and signing requirement before
+  sending.
 - When posting or sending a comment, reply, or message on the user's behalf,
   make the delegation explicit by ending the message with a clear standalone
   signature line:

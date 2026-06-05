@@ -50,6 +50,15 @@ These are cross-repo defaults. Always check the nearest repo or subdirectory
   branch (`master` or `main`), refresh that default branch intentionally, and
   base the new branch or pull request on the refreshed default branch unless the
   user explicitly asks for a different base.
+- Before making the first edit on a new branch or worktree, verify freshness:
+  refresh the intended base with a narrow fetch, record the base ref/SHA, create
+  the branch from that refreshed ref/SHA, and confirm the new branch contains
+  the recorded SHA. Do not start work from an unverified local checkout.
+- If a branch already exists before work begins, inspect its commits and working
+  tree state before changing it. For an empty branch, recreate it from the
+  refreshed base. For a branch with commits, rebase or merge the refreshed base
+  before continuing unless the user explicitly asked for a stack or a different
+  base.
 
 ## Pull Requests
 
@@ -97,6 +106,9 @@ These are cross-repo defaults. Always check the nearest repo or subdirectory
   matters.
 - State the concrete goal, the current status, the decision or help needed, and
   the relevant links or evidence in clear terms.
+- Keep the communication goal in focus. Do not include how the discussion got
+  there, resolved options, or things that are no longer blockers unless that
+  context directly helps the audience act.
 - Format messages so they are easy to parse: put the ask near the top, use
   short paragraphs or bullets for distinct facts, and avoid burying important
   context in prose.
